@@ -1,0 +1,13 @@
+<header>
+    <h1>Recipe</h1>
+    <nav>
+      <form class="d-flex" role="search">
+        <input #s type="text" (keyup.enter)="search(s.value)" 
+        placeholder="Search recipe by name and ingredients" 
+        [value]="searchTerm"
+        aria-label="Search">
+        <button (click)="search(s.value)">Search</button>
+      </form>
+    </nav>
+  </header>
+  
