@@ -1,0 +1,13 @@
+<title>Recipe list</title>
+
+
+<div class="row mt-2">
+  <div class="col-md-6 col-lg-4" *ngFor="let recipe of recipes">
+    <div class="recipe-card">
+      <h2>{{ recipe.name }}</h2>
+      <h2>{{ recipe.id }}</h2>
+      <img [src]="recipe.imageUrl" [alt]="recipe.name">
+      <button (click)="onViewRecipe(+recipe.id)">VIEW</button>
+    </div>
+  </div>
+</div>

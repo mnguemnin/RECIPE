@@ -1,0 +1,9 @@
+<div class="recipe-card">
+    <a routerLink="/api/recipes">Back</a>
+    <h2>{{ recipe.name | uppercase }}</h2>
+    <img [src]="recipe.imageUrl" [alt]="recipe.name">
+    <p>{{ recipe.description }}</p>
+    <li *ngFor="let ingredient of recipe.ingredients"></li>
+    <button class="action-button" >Modify</button>
+    <button class="action-button" (click)="onDelete()">Delete</button>
+  </div>
